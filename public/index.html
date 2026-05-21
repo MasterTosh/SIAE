@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIAE | Sistema Integral de Administracion Escolar</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegacion principal">
+        <div class="brand">
+          <div class="brand-mark">SI</div>
+          <div>
+            <strong>SIAE</strong>
+            <span>Administracion escolar</span>
+          </div>
+        </div>
+
+        <nav class="nav-list" id="mainNav"></nav>
+
+        <div class="sidebar-card">
+          <span class="eyebrow">Periodo activo</span>
+          <strong>2026 - Primavera</strong>
+          <small>18 semanas academicas</small>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-button mobile-menu" id="mobileMenu" aria-label="Abrir menu">☰</button>
+          <div>
+            <p class="page-kicker" id="pageKicker">Panel general</p>
+            <h1 id="pageTitle">Inicio</h1>
+          </div>
+          <div class="topbar-actions">
+            <label class="search-box">
+              <span>⌕</span>
+              <input id="globalSearch" type="search" placeholder="Buscar alumno, docente o pago">
+            </label>
+            <button class="icon-button" aria-label="Notificaciones">◐</button>
+            <div class="profile-chip">
+              <div class="avatar">TG</div>
+              <span>Admin General</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="content" id="view"></section>
+      </main>
+    </div>
+
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <dialog class="modal" id="userModal">
+      <form method="dialog" class="modal-card" id="userForm">
+        <div class="modal-header">
+          <div>
+            <p class="page-kicker">Gestion de usuarios</p>
+            <h2 id="modalTitle">Nuevo usuario</h2>
+          </div>
+          <button class="icon-button" id="closeUserModal" type="button" aria-label="Cerrar">×</button>
+        </div>
+
+        <input type="hidden" id="userId">
+        <div class="form-grid">
+          <label>Nombre completo
+            <input id="userName" required placeholder="Ej. Sofia Hernandez">
+          </label>
+          <label>Rol
+            <select id="userRole" required>
+              <option>Alumno</option>
+              <option>Docente</option>
+              <option>Administrador Escolar</option>
+              <option>Administrador Financiero</option>
+              <option>Administrador General</option>
+            </select>
+          </label>
+          <label>Correo institucional
+            <input id="userEmail" type="email" required placeholder="nombre@colegio.edu.mx">
+          </label>
+          <label>Telefono
+            <input id="userPhone" placeholder="55 0000 0000">
+          </label>
+          <label>Seccion
+            <select id="userSection">
+              <option>Primaria</option>
+              <option>Secundaria</option>
+              <option>Preparatoria</option>
+              <option>Universidad</option>
+              <option>Administracion</option>
+            </select>
+          </label>
+          <label>Estado
+            <select id="userStatus">
+              <option>Activo</option>
+              <option>Pendiente</option>
+              <option>Inactivo</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="modal-actions">
+          <button class="button ghost" id="cancelUserModal" type="button">Cancelar</button>
+          <button class="button primary" id="saveUserButton" type="submit">Guardar usuario</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

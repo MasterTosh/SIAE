@@ -1,0 +1,21 @@
+{
+  "name": "siae-app",
+  "version": "1.0.0",
+  "description": "Sistema Integral de Administracion Escolar - base funcional para web y app responsiva.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "siae",
+    "escuela",
+    "administracion-escolar",
+    "railway"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
